@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+	<meta name="author" content="Vincent Garreau" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>setting-1</title>
+	<link rel="stylesheet" href="../HtmlContent/icon.css" />
+    <link rel="stylesheet" href="../HtmlContent/sweetalert2.css"/>
+</head>
+<style>
+
+	html,body{
+		font-family:微軟正黑體;
+		scroll-behavior: smooth;
+ 		margin:auto;
+ 		padding:0px;
+		}
+		
+	a{ 
+		text-decoration:none;
+		color:#1da7a4;
+		} 
+	
+	a:hover{ 
+		text-decoration:none;
+		opacity:0.8;
+		cursor:pointer;
+		}
+	
+
+	img{
+		border:1px solid #ccc;
+    	max-width:100%; /*不使用width:100% 是因避免圖片解析度不好，隨父元素被放大時會糊掉*/
+   		height:auto;
+		}
+		
+	::-webkit-scrollbar {
+		width: 10px;
+		}
+
+	::-webkit-scrollbar-track{
+		margin:10px;
+		}
+		
+   	::-webkit-scrollbar-button {
+		background: transparent;
+		border-radius: 5px;
+		}
+
+  	::-webkit-scrollbar-thumb {
+		background-color: rgba(0, 0, 0,.4);
+		}
+		
+	
+	
+	.middle{
+		overflow:hidden;
+		}
+		
+	.bottom{
+		overflow:hidden;
+		height:auto;
+		}
+		
+	.word{
+		display:inline-block;
+		margin:2.5rem 2.5rem 0rem 2.5rem;
+		width:90%;
+		}
+		
+	.title{
+		margin-top:10rem;
+		font-size:17pt;
+		font-weight:bold;
+		color:#222222;
+		border-left:0.4rem solid #2b80a2;
+		}
+		
+	.bottom-word{
+		font-size:10pt;
+		color:#666666;
+		margin-top:10rem;
+		}
+		
+	#backToTop:hover{
+		opacity:0.8;
+		}
+		
+	.step{
+		color: #11b5b3;
+		background-color: #e7f8f7;
+		border: 2px solid #a0e1e1;
+		border-radius: 0.4rem;
+		width: 4rem;
+		text-align: center;
+		font-weight: bold;
+		font-size: 12pt;
+		padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+		margin-top:5rem;
+		}
+		
+	.step-word{
+		margin-bottom:1.5rem;
+		font-size:12pt;
+		margin-top:2rem;
+		line-height:0.4;
+		}
+		
+	.step-word-1{
+		text-indent: -2rem;
+		margin-left: 3.5rem;
+		line-height: 1.5;
+		}
+		
+	.top-title{
+		color:#a3a4a7;
+		font-size:12pt;
+		margin-left:1.5rem;
+		}
+		
+		
+	.img{
+		font-size: 18pt;
+		font-weight: 600;
+		padding: 2.5rem;
+		text-align: center;
+		margin-right: 1rem;
+		height: 4.7rem;
+		display: inline-block;
+		background-color: white;
+		border: 1px solid #dcdddd;
+		border-radius: 5%;
+		color:#2b80a2;
+		padding-top: 1.8rem;
+		}
+		
+	.img-word-1{
+		font-size:14pt;
+		margin-top: 0.8rem;
+			}
+		
+	.title-3-1{
+		margin-top: 2rem;
+		color: #222222;
+		font-weight: 600;
+		font-size: 13.5pt;
+		}
+			
+</style>
+<body>
+    <div id='here'>
+		<div class='bottom'>
+			<p class='top-title'>
+            	<a href="../HtmlContent/setting.html" style='color:#a3a4a7;'>
+                	區網版設定
+                </a>&nbsp;/&nbsp;
+                <span style='color:#222222;'>主機電腦</span>
+            </p>
+       		<div class='word'>
+            	<p class='title' style='margin-top:0rem;'>&nbsp;&nbsp;區網SQL Server 防火牆及組態設定</p>
+                <hr color="#dcdddd" size="1px">
+                <div style='margin-left:1.2rem;'>
+                	<p class='title-3-1' style='margin-top:1rem;'>請依照下列步驟『設定組態』及『使防火牆允許SQL Server程式使用』。</p>
+                    <p class='title-3-1' style='margin-top:-0.5rem;'>以下範例環境為 Windows 11 作業系統與 SQL Express 2022 為範例。</p>
+                    <p class='step' style='width:14rem;'>STEP1：SQL Server 組態設定</p>
+                    <p class='step-word' style='font-weight:bold;line-height:1.5;margin-top: 1.5rem;margin-left: 2rem;text-indent: -2rem;'>
+                    	一、搜尋「SQL Server 2022 設定管理員」，開啟「SQL Server 設定管理員」應用程式。<br />
+                        <span style='color:#c50808;'>
+                        	*&nbsp;若SQL Server為2019版本，請搜尋「SQL Server 2019 設定管理員」。
+                        </span>
+                    </p>
+                    <img src='../HtmlContent/image/setting-01.png'>
+                    <p class='step-word' style='font-weight:bold;margin-top:8rem;'>二、確認 SQL Server 及 SQL Server Browser 服務已開啟。</p>
+                    <p class='step-word-1' style='margin-top:-0.5rem;'>(1)&nbsp;點選『SQL Server 服務』。</p>
+                    <p class='step-word-1' style='margin-top:-0.5rem;'>(2)&nbsp;雙擊『SQL Server (XXXX)』；『XXXX』為您安裝之執行個體名稱。</p>
+                    <img src='../HtmlContent/image/setting-98.png'>
+                    <p class='step-word-1' style='margin-top:2rem;'>(3)&nbsp;確認登入身份為『本機系統』。</p>
+                    <p class='step-word-1' style='margin-top:-0.5rem;'>(4)&nbsp;確認服務狀態為『執行中』。</p>
+                    <p class='step-word-1' style='margin-top:-0.5rem;margin-bottom:1rem;'>(5)&nbsp;點選『確定』儲存設定。</p>
+                    <img src='../HtmlContent/image/setting-99.png'>
+					<p class='step-word-1' style='margin-top:2rem;margin-bottom:1rem;'>(6)&nbsp;雙擊『SQL Server Browser』。</p>
+                    <img src='../HtmlContent/image/setting-100.png'>
+					<p class='step-word-1' style='margin-top:2rem;'>(7)&nbsp;點選『服務』。</p>
+					<p class='step-word-1' style='margin-top:-0.5rem;margin-bottom:1rem;'>(8)&nbsp;確認啟動模式為『自動』。</p>
+                    <img src='../HtmlContent/image/setting-101.png'>
+                    <p class='step-word-1' style='margin-top:2rem;'>(9)&nbsp;點選『登入』。</p>
+					<p class='step-word-1' style='margin-top:-0.5rem;'>(10)&nbsp;確認服務狀態為『執行中』。</p>
+					<p class='step-word-1' style='margin-top:-0.5rem;'>(11)&nbsp;若服務狀態為『已停止』，點選『啟動』。</p>
+                    <p class='step-word-1' style='margin-top:-0.5rem;margin-bottom:1rem;'>(12)&nbsp;點選『確定』儲存設定。</p>
+                    <img src='../HtmlContent/image/setting-102.png'>
+                    <p class='step-word' style='font-weight:bold;margin-top:8rem;'>三、確認 SQL Server 通訊協定已開啟。</p>
+                    <p class='step-word-1' style='margin-top:-0.5rem;'>(1)&nbsp;點選『SQL Server 網路組態』。</p>
+                    <p class='step-word-1' style='margin-top:-0.5rem;'>(2)&nbsp;點選『XXXX 的通訊協定』；『XXXX』為您安裝之執行個體名稱。</p>
+                    <p class='step-word-1' style='margin-top:-0.5rem;'>(3)&nbsp;啟用所有通訊協定(若狀態為『已停用』，請點擊滑鼠右鍵選擇『啟用』)。</p>
+                    <p class='step-word-1' style='margin-top:-0.5rem;margin-bottom:1rem;'>(4)&nbsp;確定狀態為『已啟用』後，
+                    	<span style='color:#c50808;font-weight:bold;'>請務必先重新啟動電腦</span>
+                        ，再繼續下一個步驟。
+                    </p>
+                    <img src='../HtmlContent/image/setting-02.png'>
+                    <p class='step' style='width:8rem;margin-top:10rem;'>STEP2：查詢路徑</p>
+                    <p class='step-word' style='font-weight:bold;margin-top:1.5rem;'>一、搜尋『控制台』，開啟『控制台』應用程式。</p>
+            		<img src='../HtmlContent/image/setting-03.png'>
+                    <p class='step-word' style='font-weight:bold;margin-top:8rem;'>二、將檢視方式選擇『大圖式』，點選『Windows 工具』。</p>
+            		<img src='../HtmlContent/image/setting-04.png'>
+                    <p class='step-word' style='font-weight:bold;margin-top:8rem;'>三、請選擇『服務』。</p>
+            		<img src='../HtmlContent/image/setting-05.png'>
+                    <p class='step-word' style='font-weight:bold;margin-top:8rem;'>四、點選『SQL Server(XXXX)』右鍵，選擇『內容』。 (XXXX)為您的執行個體名稱。</p>
+            		<img src='../HtmlContent/image/setting-06.png'>
+                    <p class='step-word' style='font-weight:bold;margin-top:8rem;line-height:1.8;margin-left: 2rem;text-indent: -2rem;margin-bottom: 1rem;'>
+                    	五、在『可執行檔所在路徑』，記下引號內的路徑至『Binn』， 如：執行檔所在路徑為<br>「
+                        <span style='color:#c50808;'>C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS1\MSSQL\Binn</span>\sqlservr.exe」，
+                        <br>※ 建議使用記事本將路徑記錄下來，以利後續步驟使用。
+                    </p>
+            		<img src='../HtmlContent/image/setting-07.png'>
+                    <p class='step-word' style='font-weight:bold;margin-top:8rem;'>六、請回到『服務』，點選『SQL Server Browser』右鍵，選擇『內容』。</p>
+            		<img src='../HtmlContent/image/setting-08.png'>
+                    <p class='step-word' style='font-weight:bold;margin-top:8rem;line-height:1.8;margin-left: 2rem;text-indent: -2rem;margin-bottom: 1rem;'>
+                    	七、請至『執行檔所在路徑』，記下引號內的路徑至『Shared』， 如：執行檔所在路徑為<br>「
+                        <span style='color:#c50808;'>C:\Program Files(x86)\Microsoft SQL Server\90\Shared</span>\sqlbrowser.exe」，
+                        <br>※ 建議使用記事本將路徑記錄下來，以利後續步驟使用。
+                    </p>
+            		<img src='../HtmlContent/image/setting-09.png'>
+                    <p class='step' style='width:9rem;margin-top:10rem;'>STEP3：防火牆設定</p>
+                    <p class='step-word' style='font-weight:bold;margin-top:1.5rem;'>一、搜尋『控制台』，開啟『控制台』應用程式。</p>
+                    <img src='../HtmlContent/image/setting-03.png'>
+                    <p class='step-word' style='font-weight:bold;margin-top:8rem;'>二、將檢視方式選擇『大圖式』，點選『Windows Defender 防火牆』。</p>
+                    <img src='../HtmlContent/image/setting-10.png'>
+                    <p class='step-word' style='font-weight:bold;margin-top:8rem;line-height: 1.5;margin-left: 2rem;text-indent: -2rem;margin-bottom: 1rem;'>
+                    	三、點選『Windows Defender 防火牆』內的『允許應用程式或功能通過 Windows Defender 防火牆』。 
+                    </p>
+                    <img src='../HtmlContent/image/setting-11.png'>
+                    <p class='step-word' style='font-weight:bold;margin-top:8rem;line-height: 1.5;margin-left: 2rem;text-indent: -2rem;margin-bottom: 1rem;'>
+                    	四、點選『變更設定』→『允許其他應用程式』，開啟『新增應用程式』後，請點選『瀏覽』。
+                    </p>
+                    <img src='../HtmlContent/image/setting-12.png'>
+                    <p class='step-word' style='font-weight:bold;margin-top:8rem;line-height: 1.5;margin-left: 2rem;text-indent: -2rem;margin-bottom: 1rem;'>
+                    	五、請依步驟『STEP2』查詢路徑的第5點所記下的路徑位址貼上並搜尋，選擇『sqlservr.exe』後點選『開啟』。
+                    </p>
+                    <img src='../HtmlContent/image/setting-13.png'>
+                    <p class='step-word' style='font-weight:bold;margin-top:8rem;line-height: 1.5;margin-left: 2rem;text-indent: -2rem;margin-bottom: 1rem;'>
+                    	六、開啟後將會回到『新增應用程式』，請選擇『SQL Server Windows NT』，點選『新增』。
+                    </p>
+                    <img src='../HtmlContent/image/setting-14.png'>
+                    <p class='step-word' style='font-weight:bold;margin-top:8rem;line-height: 1.5;margin-left: 2rem;text-indent: -2rem;margin-bottom: 1rem;'>
+                    	七、請依步驟『STEP2』查詢路徑的第7點所記下的路徑位址貼上並搜尋，選擇『sqlbrowser.exe』後點選『開啟』。
+                    </p>
+                    <img src='../HtmlContent/image/setting-15.png'>
+                    <p class='step-word' style='font-weight:bold;margin-top:8rem;line-height: 1.5;margin-left: 2rem;text-indent: -2rem;margin-bottom: 1rem;'>
+                    	八、開啟後將會回到『新增程式』，請選擇『SQL Browser Service EXE』，點選『新增』。
+                    </p>
+                    <img src='../HtmlContent/image/setting-16.png'>
+                    <p class='step-word' style='font-weight:bold;margin-top:8rem;margin-left: 2rem;line-height:1.5;text-indent: -2rem;margin-bottom: 1rem;'>
+                    	九、新增完成後，請至『允許程式通過Windows防火牆通訊』內，勾選『SQL Server Windows NT』、『SQL Browser Service EXE』。
+                        <br /> 請依照個人電腦的環境設定進行勾選，並點選『確認』即可。
+                    </p>
+                    <img src='../HtmlContent/image/setting-17.png' style='margin-bottom:5rem;'>
+                </div>
+               
+			</div>
+        </div>
+    </div>
+  <a id="backToTop" href="#here"  style="position:fixed;right:3%;bottom:8%;border: 2px solid #a0e1e1;border-radius:0.5rem;height:1rem;padding: 0rem 0.7rem 1.3rem 0.7rem;color: #11b5b3;font-size:1.5rem;background-color:#e7f8f7;margin-right: 0.5%;margin-bottom: 0.5%;text-decoration: none;z-index: 5;transform: rotate(-90deg);">»</a>
+
+<script src="../HtmlContent/JQUERY.js"></script>
+<script src="../HtmlContent/sweetalert2.js"></script>
+<script>
+$(document).ready(function () {
+			$('a').click(function () { setLocalStorage(this); });
+		});
+
+		function setLocalStorage(link) {
+			let url = $(link).attr("href");
+			let lastIndex = url.lastIndexOf("/");
+			let keyWord = url.substr(lastIndex + 1);
+			localStorage.setItem("frameSrc", keyWord);
+		}
+
+</script>
+</body>
+</html>
+

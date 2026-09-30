@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+	<meta name="author" content="Vincent Garreau" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>install-2A</title>
+	<link rel="stylesheet" href="../HtmlContent/icon.css" />
+    <link rel="stylesheet" href="../HtmlContent/sweetalert2.css"/>
+</head>
+<style>
+
+	html,body{
+		font-family:微軟正黑體;
+		scroll-behavior: smooth;
+ 		margin:auto;
+ 		padding:0px;
+		}
+		
+	a{ 
+		text-decoration:none;
+		color:#1da7a4;
+		} 
+		
+	a:hover{ 
+		text-decoration:none;
+		opacity:0.8;
+		cursor:pointer;
+		}
+	
+
+	img{
+		border:1px solid #aaa;
+    	max-width:100%; /*不使用width:100% 是因避免圖片解析度不好，隨父元素被放大時會糊掉*/
+   		height:auto;
+		}
+		
+	::-webkit-scrollbar {
+		width: 10px;
+		}
+
+	::-webkit-scrollbar-track{
+		margin:10px;
+		}
+		
+   	::-webkit-scrollbar-button {
+		background: transparent;
+		border-radius: 5px;
+		}
+
+  	::-webkit-scrollbar-thumb {
+		background-color: rgba(0, 0, 0,.4);
+		}
+		
+	
+		
+	.bottom{
+		overflow:hidden;
+		height:auto;
+		}
+		
+	.word{
+		display:inline-block;
+		margin:2.5rem 2.5rem 0rem 2.5rem;
+		width:90%;
+		}
+		
+	.title{
+		margin-top:10rem;
+		font-size:17pt;
+		font-weight:bold;
+		color:#222222;
+		border-left:0.4rem solid #2b80a2;
+		}
+	
+	
+	.bottom-word{
+		font-size:10pt;
+		color:#666666;
+		margin-top:10rem;
+		}
+		
+	#backToTop:hover{
+		opacity:0.8;
+		}
+		
+	.step{
+		color: #11b5b3;
+		background-color: #e7f8f7;
+		border: 2px solid #a0e1e1;
+		border-radius: 0.4rem;
+		width: 4rem;
+		text-align: center;
+		font-weight: bold;
+		font-size: 12pt;
+		padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+		margin-top:5rem;
+		}
+		
+	.step-word{
+		font-size:12pt;
+		margin-top:2rem;
+		line-height:0.8;
+		}
+		
+	
+	
+	.top-title{
+		color:#a3a4a7;
+		font-size:12pt;
+		margin-left:1.5rem;
+		}
+		
+	.button{
+		font-weight: 600;
+		position: relative;
+		bottom: 4.5rem;
+		font-size: 12pt;
+		border-radius: 0.3rem;
+		background-color: #11b5b3;
+		color: white;
+		padding: 0.4rem 1.3rem;
+		}
+		
+	.button-1{
+		font-weight: 600;
+		position: relative;
+    	bottom: 4.5rem;
+		font-size: 12pt;
+		border-radius: 0.3rem;
+		background-color:#e55f5f;
+		color: white;
+		padding: 0.4rem 1.3rem;
+		margin-right:0.5rem;
+		}
+		
+	.button:hover,.button-1:hover{
+		opacity:0.8;
+		}
+		
+	
+			
+</style>
+<body>
+	<div id='here'>
+		<div class='bottom'>
+			<p class='top-title'>
+            	<a href="../HtmlContent/install.html" style='color:#a3a4a7;'>
+                	安裝主程式
+                </a>&nbsp;/&nbsp;
+                <span style='color:#222222;'>多公司</span>
+            </p>
+        	<div class='word'>
+            	<hr color="#dcdddd" size="2px" style=' position: relative;top:1.2rem;left:-2rem;width:77%;'>
+            	<div style='margin-left:-5rem;'>
+					<table width="800" border="0" cellspacing="50"  style='width:100%;position:relative;top:-2.5rem;'>
+                    	<tr style='position: relative;top: -2.5rem;color:#c0c4cc;font-size:16pt;font-weight:bold;'>
+                    		<td style='text-align:center;'>
+                            	<a href='../HtmlContent/install-2.html'>
+                                	<img src='../HtmlContent/image/pen-16.png' style='border:0;'>
+                                </a>
+                            </td>
+                            <td style='text-align:center;'>
+                            	<img src='../HtmlContent/image/install-icon-16.png' style='border:0;'>
+                            </td>
+                            <td style='text-align:center;'>
+                            	<a href='../HtmlContent/install-2B.html' >
+                                	<img src='../HtmlContent/image/pen-16.png' style='border:0;'>
+                                </a>
+                            </td>
+                            <td style='text-align:center;'>
+                            	<a href='../HtmlContent/install-2C.html' >
+                                	<img src='../HtmlContent/image/pen-16.png' style='border:0;'>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr style='position: relative;top: -5rem;color:#c0c4cc;font-size:16pt;font-weight:bold;'>
+                            <td style='text-align:center;'>
+                            	<a href='../HtmlContent/install-2.html' style='color:#c0c4cc;'>
+                                	步驟一
+                                </a>
+                            </td>
+                            <td style='text-align:center;color:#2b80a2;'>
+                            	步驟二
+                            </td>
+                            <td style='text-align:center;'>
+                            	<a href='../HtmlContent/install-2B.html' style='color:#c0c4cc;'>
+                                	步驟三
+                                </a>
+                            </td>
+                            <td style='text-align:center;'>
+                            	<a href='../HtmlContent/install-2C.html' style='color:#c0c4cc;'>
+                                	步驟四
+                                </a>
+                            </td>
+                        </tr>
+                        <tr  style=' position: relative;top: -8rem;color:#c0c4cc;font-size:11pt;'>
+                            <td style='text-align:center;'>
+                            	<a href='../HtmlContent/install-2.html' style='color:#c0c4cc;'>
+                                	安裝多公司管理工具
+                                </a>
+                            </td>
+                            <td style='text-align:center;color:#2b80a2;'>
+                            	管理工具測試連線
+                            </td>
+                            <td style='text-align:center;'>
+                            	<a href='../HtmlContent/install-2B.html' style='color:#c0c4cc;'>
+                                	建立公司資料庫
+                                </a>
+                            </td>
+                            <td style='text-align:center;'>
+                            	<a href='../HtmlContent/install-2C.html' style='color:#c0c4cc;'>
+                                	主程式安裝
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+				</div>
+                <p class='title' style='margin-top:-10rem;'>&nbsp;&nbsp;管理工具測試連線</p>
+                <hr color="#dcdddd" size="1px">
+                <div  style='margin-left:2rem;'>
+                	<p class='step-word' style='margin-left: 2rem;text-indent: -2rem;line-height: 1.5;font-weight: bold;'>
+                    	一、輸入安裝SQL Server資料庫時，所建立的執行個體<br>請輸入『具名執行個體』，名稱的來源由 Microsoft SQL Server 2022 Express過程中，自行設定的名稱 (預設為SQLExpress)
+                    </p>
+                    <p class='step-word' style='font-weight:bold;margin-top:1.2rem;line-height: 1.5;margin-left: 2rem;text-indent: -2rem;'>
+                    	二、驗證SQL Server資料庫登入的密碼，請使用SQL Server的帳戶驗證，並且輸入安裝資料庫時，自行設定的密碼。
+                    </p>
+                    <p class='step-word' style='font-weight:bold;'>三、點選『測試連線』，與資料庫連線成功後。</p>
+                    <p class='step-word' style='font-weight:bold;margin-bottom:2rem;'>四、請務必點選『確定』鍵，等待表單自動關閉，即可完成資料庫建立與連線。</p>
+                    <img src='../HtmlContent/image/install2A.png' style='margin-bottom:5rem;'>
+                    <br>
+                        <div style='float:right;'>
+                       <a class='button-1' href="../HtmlContent/install-2.html"   style='left:-2rem;'>上一步</a> 
+                       <a class='button' href="../HtmlContent/install-2B.html"  style='left:-2rem;'>下一步</a>
+                       </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+   <a id="backToTop" href="#here"  style="position:fixed;right:3%;bottom:8%;border: 2px solid #a0e1e1;border-radius:0.5rem;height:1rem;padding: 0rem 0.7rem 1.3rem 0.7rem;color: #11b5b3;font-size:1.5rem;background-color:#e7f8f7;margin-right: 0.5%;margin-bottom: 0.5%;text-decoration: none;z-index: 5;transform: rotate(-90deg);">»</a>
+
+</body>
+
+<script src="../HtmlContent/JQUERY.js"></script>
+<script src="../HtmlContent/sweetalert2.js"></script>
+<script>
+$(document).ready(function () {
+			$('a').click(function () { setLocalStorage(this); });
+		});
+
+		function setLocalStorage(link) {
+			let url = $(link).attr("href");
+			let lastIndex = url.lastIndexOf("/");
+			let keyWord = url.substr(lastIndex + 1);
+			localStorage.setItem("frameSrc", keyWord);
+		}
+function step8() {
+	
+			}
+</script>
+</html>
+

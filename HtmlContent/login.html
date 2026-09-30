@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+	<meta name="author" content="Vincent Garreau" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>login</title>
+	<link rel="stylesheet" href="../HtmlContent/icon.css" />
+    <link rel="stylesheet" href="../HtmlContent/sweetalert2.css"/>
+</head>
+<style>
+
+	html,body{
+		font-family:微軟正黑體;
+		scroll-behavior: smooth;
+ 		margin:auto;
+ 		padding:0px;
+		}
+		
+	a{ 
+		text-decoration:none;
+		color:#1da7a4;
+		}
+	
+	a:hover{ 
+		text-decoration:none;
+		opacity:0.8;
+		cursor:pointer;
+		}
+	
+
+		
+	img{
+    	max-width:100%; /*不使用width:100% 是因避免圖片解析度不好，隨父元素被放大時會糊掉*/
+   		height:auto;
+		}
+		
+	::-webkit-scrollbar {
+		width: 10px;
+		}
+
+	::-webkit-scrollbar-track{
+		margin:10px;
+		}
+		
+		
+   	::-webkit-scrollbar-button {
+		background: transparent;
+		border-radius: 5px;
+		}
+
+  	::-webkit-scrollbar-thumb {
+		background-color: rgba(0, 0, 0,.4);
+		}
+		
+	
+	
+	.middle{
+		overflow:hidden;
+		}
+		
+	.bottom{
+		overflow:hidden;
+		height:auto;
+		}
+		
+	.hidden{
+		display:none;
+		}
+		
+	.word{
+		display:inline-block;
+		margin:2.5rem 2.5rem 0rem 2.5rem;
+		width:90%;
+		}
+		
+	.title{
+		text-indent: -0.8rem;
+   		 padding-left: 1rem;
+		margin-top:10rem;
+		font-size:17pt;
+		font-weight:bold;
+		color:#222222;
+		border-left:0.4rem solid #2b80a2;
+		}
+	
+	.bottom-word{
+		font-size:10pt;
+		color:#666666;
+		margin-top:10rem;
+		}
+		
+	#backToTop:hover{
+		opacity:0.8;
+		}
+		
+	.step{
+		color: #11b5b3;
+		background-color: #e7f8f7;
+		border: 2px solid #a0e1e1;
+		border-radius: 0.4rem;
+		width: 4rem;
+		text-align: center;
+		font-weight: bold;
+		font-size: 12pt;
+		padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+		margin-top:5rem;
+		}
+		
+	.step-word{
+		font-size:12pt;
+		margin-top:0rem;
+		line-height:1.5;
+		}
+		
+	.step-word-1{
+		text-indent:-0.7rem;
+		margin-left:2rem;
+		margin-top:-0.5rem;
+		}
+		
+	.top-title{
+		color:#a3a4a7;
+		font-size:12pt;
+		margin-left:1.5rem;
+		}
+		
+	.img{
+		font-size: 18pt;
+		font-weight: 600;
+		text-align: center;
+		margin-right: 1rem;
+		width:18rem;
+		height: 15rem;
+		padding:1rem;
+		display: inline-block;
+		background-color: white;
+		border: 1px solid #dcdddd;
+		border-radius: 5%;
+		color:#2b80a2;
+		}
+		
+	.img-word-1{
+		color:2b80a2;
+		font-size:14pt;
+		margin-top: 0.8rem;
+			}
+			
+	.shine{
+		background-color: #e7f8f7;
+		border: 2px solid #a0e1e1;
+		}
+		
+	.down{
+		opacity:0.5;
+		}
+		
+	
+</style>
+<body>
+	<div id='here'>
+		<div class='bottom'>
+			<div class='word'>
+            	<p class='title' style='margin-top:0rem;'>&nbsp;&nbsp;首次登入時會先進行測試連線</p>
+                <hr color="#dcdddd" size="1px">
+                <div style='margin-left:2rem;'>
+                	<p class='step' style='margin-top:2rem;'>STEP1</p>
+                    <p class='step-word' style='font-weight:bold;margin-top:0rem;'>一、開啟桌面捷徑後，即會進入「設定資料庫連線」畫面。</p>
+                    <p class='step-word' style='font-weight:bold;'>二、輸入主機的名稱或IP位址。</p>
+                    <p class='step-word-1'>•&nbsp;請保持原輸入『(local)』即可。</p>
+                    <p class='step-word' style='font-weight:bold;'>三、輸入安裝SQL Server資料庫時，建立的執行個體。</p>
+                    <p class='step-word-1'>•&nbsp;請下拉選單選擇『具名執行個體』，名稱的來源由安裝 Microsoft SQL Server 2022 Express 過程中，自行設定的名稱 (預設為SQLExpress)。</p>
+                    <p class='step-word' style='font-weight:bold;'>四、驗證SQL Server資料庫登入的密碼。</p>
+                    <p class='step-word-1'>•&nbsp;請使用SQL Server的帳戶驗證，並且<span style='color:#c50808;font-weight:bold;'>輸入安裝資料庫引擎時，自行設定的密碼。</span></p>
+                    <p class='step-word-1'>•&nbsp;點選『測試連線』，與資料庫連線成功後，請務必點選『確定』鍵，等待表單自動關閉，即可完成資料庫建立與連線。</p>
+                    <p class='step-word-1' style='margin-bottom:2rem;'>•&nbsp;
+                    	<span style='color:#c50808;font-weight:bold;'>請不要在未完成時手動關閉，會造成資料庫建立不完全。</span>
+                    </p>
+                    <p class='step' style='width:22rem;'>請依您資料庫引擎安裝方式，選擇以下參考畫面:</p>
+                    <a onclick="one1()" >
+                    	<div class='img' id='1' style='margin-bottom:2rem;'>
+                        	<img src='../HtmlContent/image/login-93.png' />
+                            <p class='img-word-1'>快速安裝</p>
+                        </div>
+                    </a>
+                    <a onclick="two2()" >
+                    	<div class='img' id='2'>
+                        	<img src='../HtmlContent/image/login-94.png' />
+                            <p class='img-word-1'>標準安裝</p>
+                        </div>
+                    </a>
+                    <br />
+                    <span   id='one'>
+                    	<img src='../HtmlContent/image/login.png'>
+                    </span>
+                    <br />
+                    <span   id='two'>
+                    	<img src='../HtmlContent/image/login-2.png'>
+                    </span>
+                    <p class='step'>STEP2</p>   
+                    <p class='step-word' style='font-weight:bold;'>完成主程式測試連線後即可登入 QBoss 系統主程式<br>
+                    	<span style='color:#c50808;font-weight:bold;font-size:16pt;'>『預設帳號:admin，密碼：9999』。</span>
+                    </p>                    
+					<img src='../HtmlContent/image/login01.jpg' style='margin-top:2rem;border:1px solid #ccc;margin-bottom:5rem;'>
+				</div> 
+               
+			</div>
+		</div>
+	</div>
+    <a id="backToTop" href="#here"  style="position:fixed;right:3%;bottom:8%;border: 2px solid #a0e1e1;border-radius:0.5rem;height:1rem;padding: 0rem 0.7rem 1.3rem 0.7rem;color: #11b5b3;font-size:1.5rem;background-color:#e7f8f7;margin-right: 0.5%;margin-bottom: 0.5%;text-decoration: none;z-index: 5;transform: rotate(-90deg);">»</a>
+</div>
+    
+    
+<script src="../HtmlContent/JQUERY.js"></script>
+<script src="../HtmlContent/sweetalert2.js"></script>
+<script>
+$(document).ready(function () {
+			$('a').click(function() { setLocalStorage(this); });
+		});
+
+		function setLocalStorage(link) {
+			let url = $(link).attr("href");
+			let lastIndex = url.lastIndexOf("/");
+			let keyWord = url.substr(lastIndex + 1);
+			localStorage.setItem("frameSrc", keyWord);
+		}
+ $(document).ready(function () {
+            var $x = $("#one,#two");
+            $x.addClass("hidden");});
+			
+ function one1() {
+            var $x = $("#one");
+            $x.removeClass("hidden");
+			 var $x = $("#two");
+            $x.addClass("hidden");
+			var $x = $("#1");
+			$x.addClass("shine");
+			var $x = $("#2");
+			$x.removeClass("shine");
+			var $x = $("#2");
+			$x.addClass("down");
+			var $x = $("#1");
+			$x.removeClass("down");}
+			
+function two2() {
+            var $x = $("#two");
+            $x.removeClass("hidden");
+			var $x = $("#one");
+            $x.addClass("hidden");
+			var $x = $("#2");
+			$x.addClass("shine");
+			var $x = $("#1");
+			$x.removeClass("shine");
+			var $x = $("#1");
+			$x.addClass("down");
+			var $x = $("#2");
+			$x.removeClass("down");}
+			
+
+			
+
+</script>
+</body>
+</html>
+

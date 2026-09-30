@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+	<meta name="author" content="Vincent Garreau" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>instruction</title>
+	<link rel="stylesheet" href="../HtmlContent/icon.css" />
+    <link rel="stylesheet" href="../HtmlContent/sweetalert2.css"/>
+</head>
+<style>
+
+
+	html,body{
+		font-family:微軟正黑體;
+		scroll-behavior: smooth;
+ 		margin:auto;
+ 		padding:0px;
+		}
+		
+	a{ 
+		text-decoration:none;
+		color:#1da7a4;
+		} 
+		
+	a:hover{ 
+		text-decoration:none;
+		opacity:0.8;
+		cursor:pointer;
+		}
+	
+	img{
+    	max-width:100%; /*不使用width:100% 是因避免圖片解析度不好，隨父元素被放大時會糊掉*/
+   		height:auto;
+		}
+		
+	::-webkit-scrollbar {
+		width: 10px;
+		}
+
+	::-webkit-scrollbar-track{
+		margin:10px;
+		}
+		
+   	::-webkit-scrollbar-button {
+		background: transparent;
+		border-radius: 5px;
+		}
+
+  	::-webkit-scrollbar-thumb {
+		background-color: rgba(0, 0, 0,.4);
+		}
+		
+	
+		
+	.bottom{
+		overflow:hidden;
+		height:auto;
+		}
+		
+	.word{
+		display:inline-block;
+		margin:2.5rem 2.5rem 0rem 2.5rem;
+		width:90%;
+		}
+		
+	.title{
+		text-indent: -0.8rem;
+   		padding-left: 1rem;
+		margin-top:10rem;
+		font-size:17pt;
+		font-weight:bold;
+		color:#222222;
+		border-left:0.4rem solid #2b80a2;
+		}
+
+	.bottom-word{
+		font-size:10pt;
+		color:#666666;
+		position:fixed;
+		bottom:0.1rem;
+		left:2.5rem;
+		}
+
+	.img{
+		font-size: 18pt;
+		font-weight: 600;
+		padding: 2.5rem;
+		text-align: center;
+		margin-right: 1rem;
+		height: 4.7rem;
+		display: inline-block;
+		background-color: white;
+		border: 1px solid #dcdddd;
+		border-radius: 5%;
+		color:#2b80a2;
+		padding-top: 1.8rem;
+		}
+		
+	.img-word-1{
+		margin-top: 0.8rem;
+		font-size:14pt;
+		}
+	
+	.title-3-1{
+		line-height:1.5;
+		color: #222222;
+		font-weight: 600;
+		font-size: 13.5pt;
+		}
+	
+
+</style>
+<body>
+<div id='here'>
+	<div class='bottom'>
+		<div class='word'>
+			<p class='title' style='margin-top:0rem;'>&nbsp;&nbsp;使用說明</p>
+            <hr color="#dcdddd" size="1px">
+            <div style='margin-left:1.2rem;'>
+            	<p class='title-3-1'>軟體安裝完成後，剛開始使用軟體時可能不知道如何操作，或是使用過程中可能碰到一些問題，
+                	<br />以下我們提供幾項重要的資源，可以在您需要的時候提供協助，包括：
+                </p>
+                <a href="../HtmlContent/instruction-1.html">
+                	<div class='img' style='margin-bottom:2rem;'>
+                    	<img src='../HtmlContent/image/instruction-icon-22.png' />
+                        <p class='img-word-1'>使用操作手冊</p>
+                    </div>
+                </a>
+                <a href="../HtmlContent/instruction-2.html">
+                	<div class='img'>
+                    	<img src='../HtmlContent/image/instruction-icon-23.png' />
+                        <p class='img-word-1'>線上教學頻道</p>
+                    </div>
+                </a>
+                <a href="../HtmlContent/instruction-3.html">
+                	<div class='img' style='margin-bottom:2rem;'>
+                    	<img src='../HtmlContent/image/instruction-icon-24.png' />
+                        <p class='img-word-1'>技術支援服務</p>
+                    </div>
+                </a>
+                <!--<a href="../HtmlContent/instruction-4.html">
+                	<div class='img'>
+                    	<img src='../HtmlContent/image/instruction-icon-25.png' />
+                        <p class='img-word-1'>電子發票導入</p>
+                    </div>
+                </a>-->
+                
+			</div>  
+		</div>
+	</div>
+</div>
+    
+<script src="../HtmlContent/JQUERY.js"></script>
+<script src="../HtmlContent/sweetalert2.js"></script>
+<script>
+$(document).ready(function () {
+			$('a').click(function() { setLocalStorage(this); });
+		});
+
+		function setLocalStorage(link) {
+			let url = $(link).attr("href");
+			let lastIndex = url.lastIndexOf("/");
+			let keyWord = url.substr(lastIndex + 1);
+			localStorage.setItem("frameSrc", keyWord);
+		}
+
+
+</script>
+</body>
+</html>
+

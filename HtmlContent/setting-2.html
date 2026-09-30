@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+	<meta name="author" content="Vincent Garreau" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>setting-2</title>
+	<link rel="stylesheet" href="../HtmlContent/icon.css" />
+    <link rel="stylesheet" href="../HtmlContent/sweetalert2.css"/>
+</head>
+<style>
+
+	html,body{
+		font-family:微軟正黑體;
+		scroll-behavior: smooth;
+ 		margin:auto;
+ 		padding:0px;
+		}
+		
+	a{ 
+		text-decoration:none;
+		color:#1da7a4;
+		} 
+		
+	a:hover{ 
+		text-decoration:none;
+		opacity:0.8;
+		cursor:pointer;
+		}
+	
+	
+	img{
+		border:1px solid #ccc;
+    	max-width:100%; /*不使用width:100% 是因避免圖片解析度不好，隨父元素被放大時會糊掉*/
+   		height:auto;}
+		
+	::-webkit-scrollbar {
+		width: 10px;
+		}
+
+	::-webkit-scrollbar-track{
+		margin:10px;
+		}
+		
+   	::-webkit-scrollbar-button {
+		background: transparent;
+		border-radius: 5px;
+		}
+
+  	::-webkit-scrollbar-thumb {
+		background-color: rgba(0, 0, 0,.4);
+		}
+		
+	
+	
+	.middle{
+		overflow:hidden;
+		}
+		
+	.bottom{
+		overflow:hidden;
+		height:auto;
+		}
+		
+	.shine{
+		background-color: #e7f8f7;
+		border: 2px solid #a0e1e1;
+		}
+		
+	.down{
+		opacity:0.5;
+		}
+		
+	.hidden{
+		display:none;
+		}
+		
+	.word{
+		display:inline-block;
+		margin:2.5rem 2.5rem 0rem 2.5rem;
+		width:90%;
+		}
+		
+	.title{
+		margin-top:10rem;
+		font-size:17pt;
+		font-weight:bold;
+		color:#222222;
+		border-left:0.4rem solid #2b80a2;
+		}
+		
+	
+	.bottom-word{
+		font-size:10pt;
+		color:#666666;
+		margin-top:10rem;
+		}
+		
+	#backToTop:hover{
+		opacity:0.8;
+		}
+		
+	.step{
+		color: #11b5b3;
+		background-color: #e7f8f7;
+		border: 2px solid #a0e1e1;
+		border-radius: 0.4rem;
+		width: 4rem;
+		text-align: center;
+		font-weight: bold;
+		font-size: 12pt;
+		padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+		margin-top:5rem;
+		}
+		
+	.step-word{
+		font-size:12pt;
+		margin-top:2rem;
+		line-height:0.4;
+		}
+		
+	.step-word-1{
+		text-indent: -2rem;
+		margin-left: 3.5rem;
+		line-height: 1.5;
+		}
+		
+	.top-title{
+		color:#a3a4a7;
+		font-size:12pt;
+		margin-left:1.5rem;
+		}
+		
+		
+	.button{
+		font-weight: 600;
+		float: right;
+		position: relative;
+		top: 4.8rem;
+		font-size: 12pt;
+		border-radius: 0.3rem;
+		background-color: #11b5b3;
+		color: white;
+		padding: 0.4rem 1.3rem;
+		}
+		
+	.button:hover{
+		opacity:0.8;
+		}
+		
+	.img{
+		font-size: 18pt;
+		font-weight: 600;
+		padding: 2.5rem;
+		text-align: center;
+		margin-right: 1rem;
+		height: 4rem;
+		display: inline-block;
+		background-color: white;
+		border: 1px solid #dcdddd;
+		border-radius: 5%;
+		color:#2b80a2;
+		padding-top: 1.8rem;
+		}
+		
+	.img1{
+		font-size: 18pt;
+		font-weight: 600;
+		text-align: center;
+		margin-right: 1rem;
+		width:18rem;
+		height: 15rem;
+		padding:1rem;
+		display: inline-block;
+		background-color: white;
+		border: 1px solid #dcdddd;
+		border-radius: 5%;
+		color: #2b80a2;
+		}
+		
+	.img-word-1{
+		font-size:14pt;
+		margin-top: 0.8rem;
+		}
+		
+	.title-3-1{
+		margin-top: 2rem;
+		color: #222222;
+		font-weight: 600;
+		font-size: 13.5pt;
+		}
+			
+</style>
+<body>
+    <div id='here'>
+		<div class='bottom'>
+			<p class='top-title'>
+            	<a href="../HtmlContent/setting.html" style='color:#a3a4a7;'>
+                	區網版設定
+                </a>&nbsp;/&nbsp;
+                <span style='color:#222222;'>其他電腦</span>
+            </p>
+       		<div class='word'>
+            	<p class='title' style='margin-top:0rem;'>&nbsp;&nbsp;其他工作站電腦安裝說明</p>
+                <hr color="#dcdddd" size="1px">
+                <div style='margin-left:1.2rem;'>
+                	<p class='title-3-1' style='margin-top:1rem;'>其他台電腦，只需安裝『主程式』即可，無需再安裝SQL Server資料庫了。</p>
+            		<p class='title-3-1' style='margin-top:-0.5rem;'>請先在主機電腦完成防火牆設定再進行測試連線。</p>
+                    <div style='margin-left:0.8rem;'>
+              			<p class='step' style='color: white;background-color: #116fb5;border: 2px solid #a0b8e1;margin-top:3rem;'>單公司</p>
+                        <p class='step-word' style='font-weight:bold;    margin-bottom: 0rem;'>點擊下方
+                        	<span style='color:#c50808;'>『安裝檔路徑』</span>
+                            ，複製該路徑後，打開檔案總管找尋相對應檔案進行安裝。
+                        </p>
+                    	<a onclick="step8()">
+                        	<div class='img' style='margin-top:1rem;margin-bottom:4rem;'>
+                            	<img src='../HtmlContent/image/database-icon-13.png' style='border:0;'>
+                                <p class='img-word-1'>64位元</p>
+                            </div>
+						</a>
+                        <a onclick="step9()">
+                        	<div class='img' style='margin-top:1rem;'>
+                            	<img src='../HtmlContent/image/database-icon-13.png' style='border:0;'>
+                                <p class='img-word-1'>32位元</p>
+                            </div>
+                        </a>
+                        <br />
+						<img src='../HtmlContent/image/setting-34.jpg' style='margin-top:-3rem;'>
+                        <img src='../HtmlContent/image/setting-35.jpg' style='margin-top:1.5rem;'>
+                        <p class='step' style='color: white;background-color: #11b5b3;2px solid #a0e1e1;margin-top:10rem;'>多公司</p>
+                        <p class='step-word' style='font-weight:bold;    margin-bottom: 0rem;'>點擊下方
+                        	<span style='color:#c50808;'>『安裝檔路徑』</span>
+                            ，複製該路徑後，打開檔案總管找尋相對應檔案進行安裝。
+                        </p>
+                        <a onclick="step10()">
+                        	<div class='img' style='margin-top:1rem;'>
+                            	<img src='../HtmlContent/image/database-icon-13.png' style='border:0;'>
+                                <p class='img-word-1'>64位元</p>
+                            </div>
+                        </a>
+                        <a onclick="step11()">
+                        	<div class='img' style='margin-top:1rem;'>
+                            	<img src='../HtmlContent/image/database-icon-13.png' style='border:0;'>
+                                <p class='img-word-1'>32位元</p>
+                            </div>
+                        </a>
+                        <br />
+                        <img src='../HtmlContent/image/setting-36.jpg' style='margin-top:1.5rem;'>
+                        <img src='../HtmlContent/image/setting-37.jpg' style='margin-top:1.5rem;'>
+                        <p class='step'>STEP1</p>
+                        <p class='step-word' style='font-weight:bold;'>初始安裝畫面，閱讀完畢後請按【下一步】。</p>
+                        <img src='../HtmlContent/image/install1-1.png'>
+                        <p class='step'>STEP2</p>
+                        <p class='step-word' style='font-weight:bold;'>點選瀏覽，選取安裝路徑，或是使用預設安裝路徑後點選【下一步】 。</p>
+                        <img src='../HtmlContent/image/install1-2.png'>
+                        <p class='step'>STEP3</p>
+                        <p class='step-word' style='font-weight:bold;'>確認完成後，請按【下一步】。</p>
+                        <img src='../HtmlContent/image/install1-3.png'>
+                        
+                        <p class='step'>STEP4</p>
+                        <p class='step-word' style='font-weight:bold;'>安裝完成，請點選【離開】完成本次安裝。</p>
+                        <img src='../HtmlContent/image/install1-5.png'>
+                        <p class='step'>STEP5</p>
+                        <p class='step-word' style='font-weight:bold;margin-top:1.5rem;'>開啟桌面捷徑後，即會進入「設定資料庫連線」畫面。</p>
+                        <img src='../HtmlContent/image/install03.jpg'>
+                        <p class='step'>STEP6</p>
+                        <p class='step-word' style='font-weight:bold;'>輸入主機的名稱或IP位址。</p>
+                        <p class='step-word' style='margin-top:0.5rem; color: #c50808;font-weight:bold;line-height:1.5;'>
+                        	Clinet端 ( 其他工作站電腦 ) 測試連線時，建議使用IP位址連接主機 ( 使用電腦名稱會有連接錯主機的可能 )。
+                        </p>
+                        <img src='../HtmlContent/image/setting-18.png'>
+                        <p class='step'>STEP7</p>
+                        <p class='step-word' style='font-weight:bold;line-height:1.5;margin-top:1.5rem;'>
+                        	Clinet端測試連線時，執行個體名稱必須與主機電腦的執行個體名稱相同。<br />請您先至主機電腦，登入會計總帳系統，選擇『系統管理作業』→『系統資訊』，查看主機的執行個體名稱。
+						</p>
+                        <img src='../HtmlContent/image/setting-21.png' style='margin-bottom:5rem;border:0;'>
+					</div>
+				</div>
+                
+            </div>
+        </div>
+    </div>
+  <a id="backToTop" href="#here"  style="position:fixed;right:3%;bottom:8%;border: 2px solid #a0e1e1;border-radius:0.5rem;height:1rem;padding: 0rem 0.7rem 1.3rem 0.7rem;color: #11b5b3;font-size:1.5rem;background-color:#e7f8f7;margin-right: 0.5%;margin-bottom: 0.5%;text-decoration: none;z-index: 5;transform: rotate(-90deg);">»</a>
+
+</body>
+<script src="../HtmlContent/JQUERY.js"></script>
+<script src="../HtmlContent/sweetalert2.js"></script>
+<script>
+ $(document).ready(function () {
+            var $x = $("#one,#two");
+            $x.addClass("hidden");});
+			
+ 
+$(document).ready(function () {
+			 
+			$('a').click(function () { setLocalStorage(this); });
+		});
+
+		function setLocalStorage(link) {
+			let url = $(link).attr("href");
+			let lastIndex = url.lastIndexOf("/");
+			let keyWord = url.substr(lastIndex + 1);
+			localStorage.setItem("frameSrc", keyWord);
+		}
+		
+function one1() {
+            var $x = $("#one");
+            $x.removeClass("hidden");
+			 var $x = $("#two");
+            $x.addClass("hidden");
+			var $x = $("#1");
+			$x.addClass("shine");
+			var $x = $("#2");
+			$x.removeClass("shine");
+			var $x = $("#2");
+			$x.addClass("down");
+			var $x = $("#1");
+			$x.removeClass("down");}
+			
+function two2() {
+            var $x = $("#two");
+            $x.removeClass("hidden");
+			var $x = $("#one");
+            $x.addClass("hidden");
+			var $x = $("#2");
+			$x.addClass("shine");
+			var $x = $("#1");
+			$x.removeClass("shine");
+			var $x = $("#1");
+			$x.addClass("down");
+			var $x = $("#2");
+			$x.removeClass("down");}
+			
+		function step8() {
+			 var obj = event.srcElement; 
+				   var str = window.location.pathname;
+				   { 	
+						Swal.fire({
+						icon: "info",			
+						title: '請參考以下程式路徑執行軟體安裝',
+						width:'750px',
+						html:false,
+						html:"<h3 style='font-size: 24pt;color: #222222;margin-top: -4rem;'>請參考以下之程式路徑執行軟體安裝</h3><br/><p style='margin-top:-2rem; letter-spacing: -0.5pt;line-height: 1.5;color:#222222'>請開啟檔案總管<br><strong>「"+str.substr(1, 2)+"/QBoss 會計總帳系統 軟體安裝檔/64位元系統/單公司」</strong>資料夾<br>並以系統管理員身分執行<strong>「setup.exe」</strong>",
+						showCloseButton:'true',
+						confirmButtonText:'OK',							
+						});                
+						}
+			}
+			
+		function step9() {
+			 var obj = event.srcElement; 
+				   var str = window.location.pathname;
+				   { 	
+						Swal.fire({
+						icon: "info",			
+						title: '請參考以下程式路徑執行軟體安裝',
+						width:'750px',
+						html:false,
+						html:"<h3 style='font-size: 24pt;color: #222222;margin-top: -4rem;'>請參考以下之程式路徑執行軟體安裝</h3><br/><p style='margin-top:-2rem; letter-spacing: -0.5pt;line-height: 1.5;color:#222222'>請開啟檔案總管<br><strong>「"+str.substr(1, 2)+"/QBoss 會計總帳系統 軟體安裝檔/32位元系統/單公司」</strong>資料夾<br>並以系統管理員身分執行<strong>「setup.exe」</strong>",
+						showCloseButton:'true',
+						confirmButtonText:'OK',							
+						});                
+						}
+			}
+			
+			function step10() {
+			 var obj = event.srcElement; 
+				   var str = window.location.pathname;
+				   { 	
+						Swal.fire({
+						icon: "info",			
+						title: '請參考以下程式路徑執行軟體安裝',
+						width:'750px',
+						html:false,
+						html:"<h3 style='font-size: 24pt;color: #222222;margin-top: -4rem;'>請參考以下之程式路徑執行軟體安裝</h3><br/><p style='margin-top:-2rem; letter-spacing: -0.5pt;line-height: 1.5;color:#222222'>請開啟檔案總管<br><strong>「"+str.substr(1, 2)+"/QBoss 會計總帳系統 軟體安裝檔/64位元系統/多公司/主程式」</strong>資料夾<br>並以系統管理員身分執行<strong>「setup.exe」</strong>",
+						showCloseButton:'true',
+						confirmButtonText:'OK',							
+						});                
+						}
+			}
+			
+			function step11() {
+			 var obj = event.srcElement; 
+				   var str = window.location.pathname;
+				   { 	
+						Swal.fire({
+						icon: "info",			
+						title: '請參考以下程式路徑執行軟體安裝',
+						width:'750px',
+						html:false,
+						html:"<h3 style='font-size: 24pt;color: #222222;margin-top: -4rem;'>請參考以下之程式路徑執行軟體安裝</h3><br/><p style='margin-top:-2rem; letter-spacing: -0.5pt;line-height: 1.5;color:#222222'>請開啟檔案總管<br><strong>「"+str.substr(1, 2)+"/QBoss 會計總帳系統 軟體安裝檔/32位元系統/多公司/主程式」</strong>資料夾<br>並以系統管理員身分執行<strong>「setup.exe」</strong>",
+						showCloseButton:'true',
+						confirmButtonText:'OK',							
+						});                
+						}
+			}
+</script>
+</html>
+
